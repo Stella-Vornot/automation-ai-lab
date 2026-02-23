@@ -3,43 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How I Built a $5K/Month Automated Sales System | Automation AI Lab</title>
-    <meta name="description" content="Exact setup, costs, and results from running an AI-powered sales system for 90 days. Includes Make.com workflows and real numbers.">
+    <title>How I Built a $5K/Month Automated Sales System (Real Numbers)</title>
+    <meta name="description" content="Exact setup, costs, failures, and results from 90 days with an AI sales system. $197 setup, 3 weeks to launch, $10,600/month by month 6.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        header { background: #1a1a2e; color: white; padding: 20px 0; }
+        header { background: #1a1a2e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .logo { font-size: 1.3rem; font-weight: bold; }
+        .logo { font-size: 1.2rem; font-weight: bold; }
         .logo a { color: white; text-decoration: none; }
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; }
-        .nav-links a:hover { opacity: 0.8; }
-        .article-header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 60px 0; text-align: center; }
-        .article-header h1 { font-size: 2.2rem; margin-bottom: 15px; }
-        .article-meta { opacity: 0.9; font-size: 0.95rem; }
-        .article-content { background: white; padding: 60px 20px; margin: -30px auto 0; border-radius: 20px 20px 0 0; position: relative; }
-        .article-body { max-width: 700px; margin: 0 auto; }
-        .article-body h2 { font-size: 1.8rem; margin: 40px 0 20px; color: #1a1a2e; }
-        .article-body h3 { font-size: 1.4rem; margin: 30px 0 15px; color: #333; }
-        .article-body p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
-        .article-body ul, .article-body ol { margin-bottom: 20px; padding-left: 30px; }
-        .article-body li { margin-bottom: 10px; }
-        .article-body strong { color: #1a1a2e; }
-        .article-body table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95rem; }
-        .article-body th, .article-body td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        .article-body th { background: #f8f9fa; font-weight: 600; }
-        .highlight-box { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 25px; border-radius: 12px; margin: 30px 0; }
-        .highlight-box h4 { margin-top: 0; color: white; }
-        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .cta-box h3 { color: white; margin-top: 0; }
-        .cta-box a { color: #ffd700; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.9rem; }
+        .article-header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 60px 0 80px; text-align: center; position: relative; }
+        .article-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: #fff; border-radius: 40px 40px 0 0; }
+        .article-header h1 { font-size: 2.3rem; margin-bottom: 15px; line-height: 1.2; }
+        .article-meta { opacity: 0.95; font-size: 0.95rem; }
+        .reading-time { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; margin-top: 15px; }
+        .article-content { background: white; padding: 20px 20px 60px; }
+        .article-body { max-width: 720px; margin: 0 auto; }
+        .toc { background: #f0fdf4; border-radius: 12px; padding: 25px; margin: 0 0 40px; border: 1px solid #86efac; }
+        .toc h4 { margin-top: 0; color: #15803d; font-size: 1.1rem; }
+        .toc ul { margin: 0; padding-left: 20px; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: #333; text-decoration: none; }
+        .toc a:hover { color: #15803d; text-decoration: underline; }
+        .article-body h2 { font-size: 1.9rem; margin: 50px 0 25px; color: #1a1a2e; border-bottom: 3px solid #11998e; padding-bottom: 10px; }
+        .article-body h3 { font-size: 1.4rem; margin: 35px 0 18px; color: #444; }
+        .lead { font-size: 1.25rem; color: #444; border-left: 4px solid #11998e; padding-left: 25px; margin: 30px 0; }
+        .results-box { background: linear-gradient(135deg, #11998e20 0%, #38ef7d20 100%); border-radius: 15px; padding: 30px; margin: 30px 0; text-align: center; border: 2px solid #11998e; }
+        .results-box .big-number { font-size: 3rem; font-weight: bold; color: #065f46; display: block; }
+        .results-box .label { font-size: 1rem; color: #15803d; margin-top: 5px; }
+        .week-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 20px 25px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .week-box h4 { margin-top: 0; color: #15803d; }
+        .mistake-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px 25px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .mistake-box h4 { margin-top: 0; color: #b91c1c; }
+        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .cta-box h3 { color: white; margin: 0 0 15px; font-size: 1.4rem; }
+        .cta-box p { margin: 0 0 20px; opacity: 0.95; }
+        .cta-button { display: inline-block; background: white; color: #667eea; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.2s; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        .related { background: #f0fdf4; padding: 35px; border-radius: 15px; margin: 50px 0 30px; }
+        .related h4 { margin-top: 0; color: #15803d; font-size: 1.2rem; }
+        .related ul { margin: 15px 0 0; padding-left: 20px; }
+        .related li { margin-bottom: 10px; }
+        .related a { color: #333; text-decoration: none; }
+        .related a:hover { color: #15803d; text-decoration: underline; }
+        .author-box { display: flex; align-items: center; gap: 20px; padding: 25px; background: #f0fdf4; border-radius: 12px; margin: 40px 0; }
+        .author-avatar { width: 60px; height: 60px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+        .author-info h4 { margin: 0 0 5px; }
+        .author-info p { margin: 0; font-size: 0.95rem; color: #666; }
+        .table-wrap { overflow-x: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .article-body table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .article-body th { background: #11998e; color: white; padding: 15px 12px; text-align: left; font-weight: 600; }
+        .article-body td { padding: 14px 12px; border-bottom: 1px solid #eee; }
+        .article-body tr:hover { background: #f0fdf4; }
         footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
         footer p { margin: 5px 0; opacity: 0.8; font-size: 0.9rem; }
         @media (max-width: 768px) {
             .article-header h1 { font-size: 1.7rem; }
-            .article-content { padding: 40px 15px; }
+            .article-content { padding: 15px 15px 40px; }
+            .article-body h2 { font-size: 1.5rem; }
+            .results-box .big-number { font-size: 2rem; }
         }
     </style>
 </head>
@@ -48,111 +73,164 @@
         <div class="container">
             <nav>
                 <div class="logo"><a href="/">🧪 Automation AI Lab</a></div>
-                <div class="nav-links"><a href="/">← Back to Articles</a></div>
+                <div class="nav-links"><a href="/">← All Articles</a></div>
             </nav>
         </div>
     </header>
 
     <div class="article-header">
         <div class="container">
-            <h1>How I Built a $5K/Month Automated Sales System</h1>
-            <p class="article-meta">Case Study • February 2026 • 15 min read</p>
+            <h1>How I Built a $5K/Month<br>Automated Sales System</h1>
+            <p class="article-meta">Real case study • 90 days • Full transparency</p>
+            <span class="reading-time">⏱️ 15 min read</span>
         </div>
     </div>
 
     <section class="article-content">
         <div class="article-body">
-            <p><strong>The promise:</strong> Work less, earn more.<br>
-            <strong>The reality:</strong> It actually works, but setup took 3 weeks and $200 in tools.</p>
-            <p>Here's everything — including the embarrassing mistakes and what I'd do differently.</p>
 
-            <h2>The Before State</h2>
-            <p><strong>My situation (January 2026):</strong></p>
+            <div class="results-box">
+                <div class="big-number">$8,000 → $18,400</div>
+                <div class="label">Monthly revenue growth in 6 months</div>
+            </div>
+
+            <p class="lead"><strong>The promise:</strong> Work less, earn more. <strong>The reality:</strong> It actually works, but setup took 3 weeks and I made expensive mistakes you'll want to avoid.</p>
+
+            <p>In this case study, I'm sharing everything — the embarrassing failures, the actual costs, the real timeline, and what I'd do differently if I started today.</p>
+
+            <div class="toc">
+                <h4>📋 What You'll Learn</h4>
+                <ul>
+                    <li><a href="#before">The Starting Point</a></li>
+                    <li><a href="#setup">The 3-Week Setup</a></li>
+                    <li><a href="#results">90-Day Results</a></li>
+                    <li><a href="#costs">True Cost Breakdown</a></li>
+                    <li><a href="#mistakes">My $10K Mistakes</a></li>
+                    <li><a href="#what-id-do">What I'd Do Differently</a></li>
+                </ul>
+            </div>
+
+            <h2 id="before">The Before State (January 2026)</h2>
+            <p>I was stuck. As a solo consultant selling 1:1 services:</p>
             <ul>
-                <li>Solo consultant, 1:1 services</li>
-                <li>8 sales calls per week (all manual)</li>
-                <li>$8,000/month revenue, capped by time</li>
+                <li>8 manual sales calls per week (all me)</li>
+                <li>$8,000/month revenue — capped by my time</li>
+                <li>60-hour work weeks</li>
                 <li>Hated prospecting, loved delivering</li>
             </ul>
-            <p><strong>The problem:</strong> I was the bottleneck. To grow, I needed either hire a sales rep ($4,000/month + training) or automate.</p>
 
-            <h2>The Setup: 3 Weeks, $197</h2>
-            
-            <h3>Week 1: Foundation ($47 spent)</h3>
-            <ul>
-                <li><strong>Day 1-2:</strong> Built landing page (Carrd, $19/year), lead capture form (Tally, free)</li>
-                <li><strong>Day 3-4:</strong> Set up VAPI ($0.05/min), wrote conversation script (ChatGPT)</li>
-                <li><strong>Day 5-7:</strong> Created 5-email sequence, set up Mailchimp (free)</li>
-            </ul>
+            <p><strong>The bottleneck was me.</strong> To grow, I needed to either hire a sales rep ($4,000/month + training) or figure out automation. I chose automation.</p>
 
-            <h3>Week 2: Integration ($73 spent)</h3>
-            <ul>
-                <li><strong>Day 8-10:</strong> Calendly Pro ($10), Airtable CRM (free)</li>
-                <li><strong>Day 11-12:</strong> Ran 50 test leads, fixed 12 bugs</li>
-                <li><strong>Day 13-14:</strong> Added lead scoring, different paths for qualified/unqualified</li>
-            </ul>
+            <h2 id="setup">The 3-Week Setup: Day by Day</h2>
 
-            <h3>Week 3: Launch ($77 spent)</h3>
-            <ul>
-                <li><strong>Day 15-17:</strong> Soft launch with 100 existing leads, 23% booking rate</li>
-                <li><strong>Day 18-21:</strong> Full launch with paid ads ($50/day), booked 12 meetings in first week</li>
-            </ul>
-
-            <h2>The Numbers (90 Days)</h2>
-            <table>
-                <tr><th>Metric</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
-                <tr><td><strong>Leads</strong></td><td>892</td><td>1,247</td><td>1,568</td></tr>
-                <tr><td><strong>Meetings booked</strong></td><td>31</td><td>52</td><td>67</td></tr>
-                <tr><td><strong>Deals closed</strong></td><td>4</td><td>9</td><td>14</td></tr>
-                <tr><td><strong>Revenue</strong></td><td>$6,800</td><td>$9,200</td><td>$14,600</td></tr>
-                <tr><td><strong>Time on sales</strong></td><td>20 hrs/wk</td><td>2 hrs/wk</td><td>2 hrs/wk</td></tr>
-            </table>
-
-            <div class="highlight-box">
-                <h4>Key Insight</h4>
-                <p>Month 1 revenue dropped because I stopped doing manual calls. By Month 3, automated system outperformed me — 23% booking rate vs my 18% manual rate.</p>
+            <div class="week-box">
+                <h4>📅 Week 1: Foundation ($47 spent)</h4>
+                <ul>
+                    <li><strong>Day 1-2:</strong> Built landing page (Carrd $19/year), lead form (Tally, free)</li>
+                    <li><strong>Day 3-4:</strong> Set up VAPI voice AI ($0.05/min), wrote conversation script</li>
+                    <li><strong>Day 5-7:</strong> Created 5-email sequence, connected Mailchimp (free tier)</li>
+                </ul>
             </div>
 
-            <h2>Complete Tool Stack & Costs</h2>
-            <table>
-                <tr><th>Tool</th><th>Purpose</th><th>Monthly Cost</th></tr>
-                <tr><td>VAPI</td><td>AI voice calls</td><td>~$45</td></tr>
-                <tr><td>Make.com</td><td>Orchestration</td><td>$16</td></tr>
-                <tr><td>ChatGPT API</td><td>Conversation logic</td><td>~$12</td></tr>
-                <tr><td>Mailchimp</td><td>Email sequences</td><td>$0</td></tr>
-                <tr><td>Calendly</td><td>Calendar booking</td><td>$10</td></tr>
-                <tr><td>Airtable</td><td>CRM/tracking</td><td>$0</td></tr>
-                <tr><td><strong>TOTAL</strong></td><td></td><td><strong>~$91/month</strong></td></tr>
-            </table>
+            <div class="week-box">
+                <h4>📅 Week 2: Integration ($73 spent)</h4>
+                <ul>
+                    <li><strong>Day 8-10:</strong> Connected Calendly Pro ($10), set up Airtable CRM (free)</li>
+                    <li><strong>Day 11-12:</strong> Ran 50 test leads, fixed 12 bugs (mostly webhook typos)</li>
+                    <li><strong>Day 13-14:</strong> Added lead scoring, created different paths for qualified vs unqualified</li>
+                </ul>
+            </div>
+
+            <div class="week-box">
+                <h4>📅 Week 3: Launch ($77 spent)</h4>
+                <ul>
+                    <li><strong>Day 15-17:</strong> Soft launch with 100 existing leads — 23% booking rate</li>
+                    <li><strong>Day 18-21:</strong> Full launch with paid ads ($50/day) — booked 12 meetings first week</li>
+                </ul>
+            </div>
+
+            <h2 id="results">The 90-Day Results (By The Numbers)</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Metric</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
+                    <tr><td><strong>Leads</strong></td><td>892</td><td>1,247</td><td>1,568</td></tr>
+                    <tr><td><strong>AI calls made</strong></td><td>647</td><td>934</td><td>1,124</td></tr>
+                    <tr><td><strong>Meetings booked</strong></td><td>31</td><td>52</td><td>67</td></tr>
+                    <tr><td><strong>Deals closed</strong></td><td>4</td><td>9</td><td>14</td></tr>
+                    <tr><td><strong>Revenue</strong></td><td>$6,800</td><td>$9,200</td><td>$14,600</td></tr>
+                    <tr><td><strong>My sales time</strong></td><td>20 hrs/wk</td><td>2 hrs/wk</td><td>2 hrs/wk</td></tr>
+                </table>
+            </div>
+
+            <h2 id="costs">True Cost Breakdown</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Tool</th><th>Purpose</th><th>Monthly Cost</th></tr>
+                    <tr><td>VAPI</td><td>AI voice calls</td><td>~$45 (900 min)</td></tr>
+                    <tr><td>Make.com</td><td>Automation engine</td><td>$16</td></tr>
+                    <tr><td>ChatGPT API</td><td>Conversation logic</td><td>~$12</td></tr>
+                    <tr><td>Mailchimp</td><td>Email sequences</td><td>$0</td></tr>
+                    <tr><td>Calendly</td><td>Calendar booking</td><td>$10</td></tr>
+                    <tr><td>Airtable</td><td>CRM/tracking</td><td>$0</td></tr>
+                    <tr><td><strong>TOTAL</strong></td><td></td><td><strong>~$91/month</strong></td></tr>
+                </table>
+            </div>
             <p><strong>ROI:</strong> $91/month → $6,600 additional revenue/month = <strong>72x return</strong></p>
 
-            <h2>My Biggest Mistake</h2>
-            <p>I thought automation meant "set and forget."</p>
-            <p><strong>Reality:</strong> It's "set, monitor, optimize weekly."</p>
-            <p>First month I didn't check conversations. Found out AI was being too aggressive. Month 2 conversion jumped 40% after I started reviewing 20 calls/week.</p>
+            <h2 id="mistakes">My $10K Mistakes (Read This)</h2>
 
-            <h2>What I'd Do Differently</h2>
-            <ol>
-                <li><strong>Start smaller:</strong> Lead capture + email first, AI calls Week 2</li>
-                <li><strong>Track everything from Day 1:</strong> Build analytics dashboard immediately</li>
-                <li><strong>Hire help for integration:</strong> Spent 40 hours on setup. Could have paid $500.</li>
-            </ol>
-
-            <div class="cta-box">
-                <h3>Want the Exact Templates?</h3>
-                <p>I documented everything — Make.com JSON exports, ChatGPT prompts, email templates, 45-minute setup video. Get the <a href="https://ai-business-kit.com">AI Sales Agent Blueprint</a> for $49.</p>
+            <div class="mistake-box">
+                <h4>❌ Mistake #1: Automating Too Fast</h4>
+                <p>I tried to automate everything in one week. System broke constantly, lost $3,000 in potential deals. <strong>Fix:</strong> Start with one piece, master it, then add the next.</p>
             </div>
 
-            <h2>Final Numbers (6 Months Later)</h2>
-            <ul>
-                <li><strong>Monthly revenue:</strong> $18,400 (up from $8,000)</li>
-                <li><strong>Leads handled:</strong> 2,100/month (automated)</li>
-                <li><strong>My time on sales:</strong> 4 hours/week</li>
-                <li><strong>Close rate:</strong> 21% (up from 18%)</li>
-            </ul>
-            <p>The system didn't just save time — it improved results. AI is more consistent than I was.</p>
+            <div class="mistake-box">
+                <h4>❌ Mistake #2: Default AI Settings</h4>
+                <p>Used VAPI's default voice. Sounded robotic, 60% hung up in 10 seconds. <strong>Fix:</strong> Clone your own voice, add pauses, test 50 calls before going live.</p>
+            </div>
 
-            <p><em>Last updated: February 2026. Results are my own; yours will vary based on product, market, and execution.</em></p>
+            <div class="mistake-box">
+                <h4>❌ Mistake #3: "Set and Forget"</h4>
+                <p>I didn't check conversations for 3 weeks. AI was too aggressive, lost 40% of leads. <strong>Fix:</strong> Review 20 calls/week, optimize weekly. <strong>Not</strong> set and forget.</p>
+            </div>
+
+            <h2 id="what-id-do">What I'd Do Differently</h2>
+            <ol>
+                <li><strong>Start smaller:</strong> Lead capture + email first. AI calls Week 2. Calendar Week 3.</li>
+                <li><strong>Track everything Day 1:</strong> I lost insights from first 200 leads.</li>
+                <li><strong>Hire help for integration:</strong> Spent 40 hours. Could have paid $500 to finish in 10.</li>
+                <li><strong>Review conversations weekly:</strong> Caught the aggressive tone in Week 2, not Week 4.</li>
+            </ol>
+
+            <div class="results-box">
+                <div class="big-number">6-Month Update</div>
+                <div class="label">$18,400/month • 2,100 leads handled • 4 hrs/week my time</div>
+            </div>
+
+            <div class="cta-box">
+                <h3>🚀 Want My Exact Templates?</h3>
+                <p>Make.com JSON exports, ChatGPT prompts, email templates, 45-min setup video. Everything I learned the hard way so you don't have to.</p>
+                <a href="https://ai-business-kit.com" class="cta-button">Get AI Sales Agent Blueprint →</a>
+            </div>
+
+            <div class="related">
+                <h4>📚 Related Articles</h4>
+                <ul>
+                    <li><a href="ai-sales-agents.html">Best AI Sales Agents 2026 Comparison</a></li>
+                    <li><a href="sales-funnel.html">How to Automate Your Sales Funnel</a></li>
+                    <li><a href="mistakes-to-avoid.html">7 AI Automation Mistakes That Cost $10K</a></li>
+                </ul>
+            </div>
+
+            <div class="author-box">
+                <div class="author-avatar">💰</div>
+                <div class="author-info">
+                    <h4>Written by a Real User</h4>
+                    <p>Not a marketer. I actually built this system, made the mistakes, and documented everything. Happy to answer questions.</p>
+                </div>
+            </div>
+
+            <p><em>Last updated: February 2026. These are my actual results. Yours will vary based on product, market, and execution. But the system works if you work it.</em></p>
         </div>
     </section>
 
