@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation AI Lab - AI Tools Reviews & Tutorials</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #1a1a2e; color: white; padding: 40px 0; }
+        nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+        .logo { font-size: 1.3rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; }
+        .nav-links a:hover { opacity: 0.8; }
+        
+        .hero { text-align: center; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .articles { padding: 60px 0; background: #f8f9fa; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; text-align: center; }
+        
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .article-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .article-card:hover { transform: translateY(-5px); }
+        .article-image { height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .article-content { padding: 25px; }
+        .category { color: #667eea; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+        h3 { font-size: 1.2rem; margin: 12px 0; }
+        .excerpt { color: #666; margin-bottom: 15px; font-size: 0.95rem; }
+        .read-more { color: #667eea; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+        .read-more:hover { text-decoration: underline; }
+        
+        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        footer p { margin: 5px 0; opacity: 0.8; font-size: 0.9rem; }
+        
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            h2 { font-size: 1.5rem; }
+            .article-grid { grid-template-columns: 1fr; }
+            nav { flex-direction: column; align-items: flex-start; }
+        }
+        
+        @media (max-width: 480px) {
+            header { padding: 30px 0; }
+            .hero h1 { font-size: 1.5rem; }
+            .articles { padding: 40px 0; }
+            .article-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🧪 Automation AI Lab</div>
+                <div class="nav-links">
+                    <a href="#articles">Articles</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#tutorials">Tutorials</a>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1>Real AI Tool Reviews & Automation Guides</h1>
+                <p>Tested. Reviewed. Ranked. We actually use the tools we recommend.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="articles" id="articles">
+        <div class="container">
+            <h2>Latest Reviews</h2>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-image">🤖</div>
+                    <div class="article-content">
+                        <span class="category">Review</span>
+                        <h3>Best AI Sales Agents 2026: Complete Comparison</h3>
+                        <p class="excerpt">We tested 12 AI calling platforms. Here are the winners for different use cases and budgets.</p>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Review →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">⚡</div>
+                    <div class="article-content">
+                        <span class="category">Tutorial</span>
+                        <h3>Make.com vs Zapier vs n8n: Which Should You Choose?</h3>
+                        <p class="excerpt">Detailed feature comparison, pricing analysis, and recommendations based on 6 months of testing.</p>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Tutorial →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">💰</div>
+                    <div class="article-content">
+                        <span class="category">Case Study</span>
+                        <h3>How I Automated $5K/Month in Sales (Full Breakdown)</h3>
+                        <p class="excerpt">Exact setup, costs, and results from running an AI sales system for 90 days.</p>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Case Study →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Automation AI Lab. Testing AI tools so you don't have to.</p>
+            <p>Affiliate disclosure: Some links are affiliate links. We only recommend tools we actually use.</p>
+        </div>
+    </footer>
+</body>
+</html>
