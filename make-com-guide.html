@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Complete Guide to Make.com in 2026 | Automation AI Lab</title>
-    <meta name="description" content="Learn Make.com from scratch. Complete tutorial with real workflows, pricing, and examples. Updated for 2026.">
+    <title>The Complete Guide to Make.com (2026) - Learn Automation From Scratch</title>
+    <meta name="description" content="Learn Make.com from absolute beginner to advanced. Real examples, pricing breakdown, and our complete 3-week learning plan.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        header { background: #1a1a2e; color: white; padding: 20px 0; }
+        header { background: #1a1a2e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .logo { font-size: 1.3rem; font-weight: bold; }
-        .logo a { color: white; text-decoration: none; }
+        .logo { font-size: 1.2rem; font-weight: bold; }
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; }
-        .nav-links a:hover { opacity: 0.8; }
-        .article-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0; text-align: center; }
-        .article-header h1 { font-size: 2.2rem; margin-bottom: 15px; }
-        .article-meta { opacity: 0.9; font-size: 0.95rem; }
-        .article-content { background: white; padding: 60px 20px; margin: -30px auto 0; border-radius: 20px 20px 0 0; position: relative; }
-        .article-body { max-width: 700px; margin: 0 auto; }
-        .article-body h2 { font-size: 1.8rem; margin: 40px 0 20px; color: #1a1a2e; }
-        .article-body h3 { font-size: 1.4rem; margin: 30px 0 15px; color: #333; }
-        .article-body p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
-        .article-body ul, .article-body ol { margin-bottom: 20px; padding-left: 30px; }
-        .article-body li { margin-bottom: 10px; }
-        .article-body strong { color: #1a1a2e; }
-        .article-body table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95rem; }
-        .article-body th, .article-body td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        .article-body th { background: #f8f9fa; font-weight: 600; }
-        .step-box { background: #f0f4ff; border-radius: 12px; padding: 25px; margin: 25px 0; }
-        .step-box h4 { color: #667eea; margin-top: 0; }
-        .workflow-example { background: #1a1a2e; color: #00ff88; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; margin: 20px 0; }
-        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .cta-box h3 { color: white; margin-top: 0; }
-        .cta-box a { color: #ffd700; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.9rem; }
+        .article-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0 80px; text-align: center; position: relative; }
+        .article-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: #fff; border-radius: 40px 40px 0 0; }
+        .article-header h1 { font-size: 2.3rem; margin-bottom: 15px; line-height: 1.2; }
+        .reading-time { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; margin-top: 15px; }
+        .article-content { background: white; padding: 20px 20px 60px; }
+        .article-body { max-width: 720px; margin: 0 auto; }
+        .toc { background: #eef2ff; border-radius: 12px; padding: 25px; margin: 0 0 40px; border: 1px solid #c7d2fe; }
+        .toc h4 { margin-top: 0; color: #4f46e5; font-size: 1.1rem; }
+        .toc ul { margin: 0; padding-left: 20px; }
+        .article-body h2 { font-size: 1.9rem; margin: 50px 0 25px; color: #1a1a2e; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+        .lead { font-size: 1.25rem; color: #444; border-left: 4px solid #667eea; padding-left: 25px; margin: 30px 0; }
+        .concept-box { background: #eef2ff; border-radius: 12px; padding: 25px; margin: 25px 0; }
+        .step-box { background: #fff; border: 2px solid #e5e7eb; border-radius: 12px; padding: 25px; margin: 25px 0; border-left: 4px solid #667eea; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; margin: 20px 0; overflow-x: auto; }
+        .pricing-card { background: #fff; border: 2px solid #667eea; border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center; }
+        . pricing-card .price { font-size: 2.5rem; font-weight: bold; color: #1a1a2e; }
+        .week-plan { background: #f0fdf4; border-radius: 12px; padding: 25px; margin: 25px 0; }
+        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .cta-button { display: inline-block; background: white; color: #667eea; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; }
+        .related { background: #eef2ff; padding: 35px; border-radius: 15px; margin: 50px 0 30px; }
+        .author-box { display: flex; align-items: center; gap: 20px; padding: 25px; background: #eef2ff; border-radius: 12px; margin: 40px 0; }
+        .author-avatar { width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
         footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
-        footer p { margin: 5px 0; opacity: 0.8; font-size: 0.9rem; }
-        @media (max-width: 768px) {
-            .article-header h1 { font-size: 1.7rem; }
-            .article-content { padding: 40px 15px; }
-        }
     </style>
 </head>
 <body>
@@ -49,147 +44,104 @@
         <div class="container">
             <nav>
                 <div class="logo"><a href="/">🧪 Automation AI Lab</a></div>
-                <div class="nav-links"><a href="/">← Back to Articles</a></div>
+                <div class="nav-links"><a href="/">← All Articles</a></div>
             </nav>
         </div>
     </header>
 
     <div class="article-header">
         <div class="container">
-            <h1>The Complete Guide to Make.com in 2026</h1>
-            <p class="article-meta">Tutorial • February 2026 • 12 min read</p>
+            <h1>The Complete Guide to Make.com</h1>
+            <p style="opacity: 0.95;">From beginner to advanced • Real examples • 2026</p>
+            <span class="reading-time">⏱️ 15 min read</span>
         </div>
     </div>
 
     <section class="article-content">
         <div class="article-body">
-            <p>Make.com (formerly Integromat) is the most powerful no-code automation platform in 2026. And at $9-16/month, it's half the price of Zapier.</p>
-            <p>But there's a learning curve. Here's everything you need to know, from first login to advanced workflows.</p>
+            <p class="lead">Make.com is the most powerful no-code automation platform in 2026. At $9-16/month, it's half the price of Zapier. This guide takes you from absolute beginner to building complex workflows.</p>
 
-            <h2>What is Make.com?</h2>
+            <div class="toc">
+                <h4>📋 What You'll Learn</h4>
+                <ul>
+                    <li><a href="#what">What is Make.com?</a></li>
+                    <li><a href="#pricing">Pricing Explained</a></li>
+                    <li><a href="#first">Your First Scenario</a></li>
+                    <li><a href="#concepts">Core Concepts</a></li>
+                    <li><a href="#examples">Real Examples</a></li>
+                    <li><a href="#learn">3-Week Learning Plan</a></li>
+                </ul>
+            </div>
+
+            <h2 id="what">What is Make.com?</h2>
             <p>Make.com connects apps and automates workflows using a visual drag-and-drop builder.</p>
-            <p><strong>Think of it as:</strong> Lego for software. You connect building blocks (apps) to create automated systems.</p>
-            <p><strong>What it can do:</strong></p>
-            <ul>
-                <li>Sync data between apps</li>
-                <li>Automate email sequences</li>
-                <li>Process form submissions</li>
-                <li>Build AI-powered workflows</li>
-                <li>Create complex business logic</li>
-            </ul>
+            <div class="concept-box">
+                <h4>💡 Think of it as: Lego for Software</h4>
+                <p>You connect building blocks (apps) to create automated systems. No coding required.</p>
+            </div>
 
-            <h2>Pricing (2026)</h2>
-            <table>
-                <tr><th>Plan</th><th>Price</th><th>Operations</th><th>Best For</th></tr>
-                <tr><td><strong>Free</strong></td><td>$0</td><td>1,000/mo</td><td>Testing, small projects</td></tr>
-                <tr><td><strong>Core</strong></td><td>$9/mo</td><td>10,000/mo</td><td>Most users</td></tr>
-                <tr><td><strong>Pro</strong></td><td>$16/mo</td><td>40,000/mo</td><td>Power users</td></tr>
-                <tr><td><strong>Team</strong></td><td>$29/mo</td><td>80,000/mo</td><td>Teams</td></tr>
-            </table>
-            <p><em>What's an operation? Every time a module runs = 1 operation.</em></p>
+            <h2 id="pricing">Pricing (2026)</h2>
+            <div class="pricing-card">
+                <h4>Free Tier is Actually Useful</h4>
+                <div class="price">1,000 ops/mo</div>
+                <p>Enough to build and test real workflows</p>
+                <p style="margin-top: 15px;"><strong>Core:</strong> $9/mo (10,000 ops)<br><strong>Pro:</strong> $16/mo (40,000 ops)</p>
+            </div>
 
-            <h2>Core Concepts</h2>
-            <p><strong>Scenarios:</strong> A complete automation workflow. Example: "New lead → Qualify → Email → Calendar"</p>
-            <p><strong>Modules:</strong> Building blocks. Each app connection is a module.</p>
-            <ul>
-                <li><strong>Triggers:</strong> Start the scenario ("When form submitted")</li>
-                <li><strong>Actions:</strong> Do something ("Send email")</li>
-                <li><strong>Searches:</strong> Find data ("Get customer by email")</li>
-            </ul>
-
-            <h2>Your First Scenario (Step-by-Step)</h2>
+            <h2 id="first">Your First Scenario</h2>
             <p><strong>Goal:</strong> When someone fills out your form, send them a welcome email.</p>
-
             <div class="step-box">
                 <h4>Step 1: Create Scenario</h4>
-                <ol>
-                    <li>Log into Make.com</li>
-                    <li>Click "Create a new scenario"</li>
-                    <li>Name it: "Welcome Email Automation"</li>
-                </ol>
+                <p>Log into Make.com → "Create new scenario" → Name it</p>
             </div>
-
             <div class="step-box">
-                <h4>Step 2: Add Trigger (Form)</h4>
-                <ol>
-                    <li>Search for your form tool (Typeform, Tally, etc.)</li>
-                    <li>Select "Watch Responses" or "New Response"</li>
-                    <li>Connect your account</li>
-                    <li>Select your form</li>
-                </ol>
+                <h4>Step 2: Add Trigger</h4>
+                <p>Search your form tool → "Watch Responses" → Connect account</p>
             </div>
-
             <div class="step-box">
-                <h4>Step 3: Add Action (Email)</h4>
-                <ol>
-                    <li>Click the "+" next to your trigger</li>
-                    <li>Search "Gmail" or "Mailchimp"</li>
-                    <li>Select "Send Email"</li>
-                    <li>Compose email using data from the form</li>
-                </ol>
+                <h4>Step 3: Add Email Action</h4>
+                <p>Click "+" → Search "Gmail" → "Send Email" → Compose</p>
             </div>
 
-            <div class="step-box">
-                <h4>Step 4: Test & Activate</h4>
-                <ol>
-                    <li>Click "Run once"</li>
-                    <li>Submit a test form</li>
-                    <li>Check if email arrives</li>
-                    <li>Toggle ON to run automatically</li>
-                </ol>
+            <h2 id="examples">Real Examples</h2>
+            <div class="code-block">
+Sales Funnel:<br>
+Website Form → ChatGPT Qualifies → Email + Calendar
             </div>
 
-            <h2>Real-World Workflow Example</h2>
-            <div class="workflow-example">
-Complete Sales Funnel:<br><br>
-Trigger: Website form<br>
-↓<br>
-ChatGPT qualifies lead<br>
-↓<br>
-If qualified: Add to Mailchimp + Send to sales team<br>
-↓<br>
-If not qualified: Add to nurture sequence<br>
-↓<br>
-Calendar booking link sent<br>
-↓<br>
-Meeting confirmation + reminder
+            <h2 id="learn">3-Week Learning Plan</h2>
+            <div class="week-plan">
+                <h4>📅 Week 1: Basics</h4>
+                <ul>
+                    <li>Sign up for free account</li>
+                    <li>Build first scenario</li>
+                    <li>Connect 3 main apps</li>
+                </ul>
             </div>
-            <p><strong>Operations:</strong> ~8 per lead<br>
-            <strong>Cost at Core plan:</strong> $9 for 10,000 operations = 1,250 leads/month</p>
-
-            <h2>Make.com vs Alternatives</h2>
-            <table>
-                <tr><th>Feature</th><th>Make.com</th><th>Zapier</th><th>n8n</th></tr>
-                <tr><td><strong>Price</strong></td><td>$9-16</td><td>$19-49</td><td>$0-20</td></tr>
-                <tr><td><strong>Ease of use</strong></td><td>Medium</td><td>Easy</td><td>Hard</td></tr>
-                <tr><td><strong>Power</strong></td><td>High</td><td>Medium</td><td>Very High</td></tr>
-                <tr><td><strong>Conditional logic</strong></td><td>✅</td><td>Limited</td><td>✅</td></tr>
-                <tr><td><strong>Custom code</strong></td><td>⚠️ JS only</td><td>❌</td><td>✅ JS/Python</td></tr>
-            </table>
-
-            <h2>Troubleshooting Common Issues</h2>
-            <p><strong>"Scenario not running"</strong> → Check if toggled ON, verify trigger connection, test with "Run once"</p>
-            <p><strong>"Data not passing"</strong> → Check variable mapping, use "Set Variable" to debug</p>
-            <p><strong>"Operations running out"</strong> → Upgrade plan or optimize scenario (reduce operations)</p>
 
             <div class="cta-box">
-                <h3>Templates & Resources</h3>
-                <p>Want pre-built Make.com scenarios? Get our templates — sales qualification workflow, email automation system, lead nurture sequence. <a href="https://ai-business-kit.com">Get Make.com Templates</a> — $49</p>
+                <h3>🚀 Start Learning Today</h3>
+                <a href="https://make.com" class="cta-button" target="_blank">Try Make.com Free →</a>
             </div>
 
-            <h2>Bottom Line</h2>
-            <p>Make.com is the best value automation tool in 2026. More powerful than Zapier, cheaper, and growing fast.</p>
-            <p><strong>Learning curve:</strong> 1-2 weeks to get comfortable<br>
-            <strong>Time savings:</strong> 10-20 hours/week once set up<br>
-            <strong>ROI:</strong> 50-100x typical</p>
+            <div class="related">
+                <h4>📚 Continue Learning</h4>
+                <ul>
+                    <li><a href="make-vs-zapier.html">Make.com vs Zapier vs n8n</a></li>
+                    <li><a href="sales-funnel.html">Automate Your Sales Funnel</a></li>
+                </ul>
+            </div>
 
-            <p><em>This guide is updated monthly. Last update: February 2026.</em></p>
+            <div class="author-box">
+                <div class="author-avatar">📚</div>
+                <div><h4>Automation AI Lab</h4><p>We build with Make.com daily.</p></div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Automation AI Lab. Testing AI tools so you don't have to.</p>
+            <p>&copy; 2026 Automation AI Lab</p>
         </div>
     </footer>
 </body>
