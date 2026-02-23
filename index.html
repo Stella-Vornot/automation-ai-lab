@@ -9,28 +9,49 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        header { background: #1a1a2e; color: white; padding: 60px 0; }
-        nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
-        .logo { font-size: 1.5rem; font-weight: bold; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 30px; }
+        header { background: #1a1a2e; color: white; padding: 40px 0; }
+        nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+        .logo { font-size: 1.3rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; }
+        .nav-links a:hover { opacity: 0.8; }
         
         .hero { text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 20px; }
-        .subtitle { font-size: 1.3rem; opacity: 0.9; margin-bottom: 30px; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
         .articles { padding: 60px 0; background: #f8f9fa; }
-        h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; text-align: center; }
         
-        .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .article-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .article-image { height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-        .article-content { padding: 30px; }
-        .category { color: #667eea; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
-        h3 { font-size: 1.4rem; margin: 15px 0; }
-        .excerpt { color: #666; margin-bottom: 20px; }
-        .read-more { color: #667eea; text-decoration: none; font-weight: bold; }
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .article-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .article-card:hover { transform: translateY(-5px); }
+        .article-image { height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .article-content { padding: 25px; }
+        .category { color: #667eea; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+        h3 { font-size: 1.2rem; margin: 12px 0; }
+        .excerpt { color: #666; margin-bottom: 15px; font-size: 0.95rem; }
+        .read-more { color: #667eea; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+        .read-more:hover { text-decoration: underline; }
         
-        footer { background: #1a1a2e; color: white; padding: 40px 0; text-align: center; }
+        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        footer p { margin: 5px 0; opacity: 0.8; font-size: 0.9rem; }
+        
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            h2 { font-size: 1.5rem; }
+            .article-grid { grid-template-columns: 1fr; }
+            nav { flex-direction: column; align-items: flex-start; }
+        }
+        
+        @media (max-width: 480px) {
+            header { padding: 30px 0; }
+            .hero h1 { font-size: 1.5rem; }
+            .articles { padding: 40px 0; }
+            .article-content { padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -46,7 +67,7 @@
             </nav>
             <div class="hero">
                 <h1>Real AI Tool Reviews & Automation Guides</h1>
-                <p class="subtitle">Tested. Reviewed. Ranked. We actually use the tools we recommend.</p>
+                <p>Tested. Reviewed. Ranked. We actually use the tools we recommend.</p>
             </div>
         </div>
     </header>
@@ -61,7 +82,7 @@
                         <span class="category">Review</span>
                         <h3>Best AI Sales Agents 2026: Complete Comparison</h3>
                         <p class="excerpt">We tested 12 AI calling platforms. Here are the winners for different use cases and budgets.</p>
-                        <a href="#" class="read-more">Read Review →</a>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Review →</a>
                     </div>
                 </article>
                 
@@ -71,7 +92,7 @@
                         <span class="category">Tutorial</span>
                         <h3>Make.com vs Zapier vs n8n: Which Should You Choose?</h3>
                         <p class="excerpt">Detailed feature comparison, pricing analysis, and recommendations based on 6 months of testing.</p>
-                        <a href="#" class="read-more">Read Tutorial →</a>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Tutorial →</a>
                     </div>
                 </article>
                 
@@ -81,7 +102,7 @@
                         <span class="category">Case Study</span>
                         <h3>How I Automated $5K/Month in Sales (Full Breakdown)</h3>
                         <p class="excerpt">Exact setup, costs, and results from running an AI sales system for 90 days.</p>
-                        <a href="#" class="read-more">Read Case Study →</a>
+                        <a href="#" class="read-more" onclick="alert('Full article coming soon!'); return false;">Read Case Study →</a>
                     </div>
                 </article>
             </div>
@@ -95,4 +116,4 @@
         </div>
     </footer>
 </body>
-</html><!-- Deployed Sun Feb 22 01:23:11 PST 2026 -->
+</html>
